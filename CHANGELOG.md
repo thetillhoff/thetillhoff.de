@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.0.19
+- Add multi-arch build & migrate to docker-actions
+- Update caddy version
+- Add renovate.json for automatic updates of minor and patch versions
+
 # v1.0.18
 - Update dependencies
 - Remove unused prerequisites from pipeline
