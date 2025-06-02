@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v1.0.20
+- Update dependencies
+
 ## v1.0.19
 - Add multi-arch build & migrate to docker-actions
 - Update caddy version
