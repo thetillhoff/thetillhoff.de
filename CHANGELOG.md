@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v1.0.22
+- Update umami id, since the used umami instance changed
+
 ## v1.0.21
 - Update umami id, since the used umami instance changed
 
