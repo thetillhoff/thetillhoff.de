@@ -1,4 +1,4 @@
-FROM ghcr.io/thetillhoff/temingo:2.1.2 AS builder
+FROM ghcr.io/thetillhoff/temingo:2.1.3 AS builder
 COPY src src
 RUN temingo
 
