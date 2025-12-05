@@ -1,6 +1,8 @@
-name: Publish image to container registry
+name: Publish image to container registry on commit
 on:
   push:
+    branches:
+      - "*"
 
 jobs:
   build-and-push:
