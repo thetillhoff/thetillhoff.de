@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.1.1
+
+- Update Caddyfile settings
+
 ## v1.1.0
 
 - Update temingo version

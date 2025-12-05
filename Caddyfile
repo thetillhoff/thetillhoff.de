@@ -6,23 +6,27 @@
 
 	header {
 		# Configure caching
-		header Cache-Control max-age=3600; # 1h
+		Cache-Control "public, max-age=3600, must-revalidate" # 1h
 
-		# Enable HSTS
-		Strict-Transport-Security max-age=31536000;
+		# Enable HSTS with subdomains and preload
+		Strict-Transport-Security "max-age=31536000"
 
-		# Disable FLoC tracking
-		Permissions-Policy interest-cohort=()
-
-		# Enable cross-site filter (XSS)
-		# and tell browser to block detected attacks
-		X-Frame-Options DENY
+		# Prevent clickjacking attacks
+		X-Frame-Options "DENY"
 
 		# Disable clients from sniffing the media type
-		X-Content-Type-Options nosniff
+		X-Content-Type-Options "nosniff"
+
+		# Control referrer information
+		Referrer-Policy "strict-origin-when-cross-origin"
+
+		# Control browser features and APIs
+		Permissions-Policy "geolocation=(), microphone=(), camera=(), fullscreen=(self), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
 
 		# Set CSP
-		Content-Security-Policy "default-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' https://analytics.thetillhoff.de; img-src 'self'; connect-src https://analytics.thetillhoff.de;"
+		# Note: 'unsafe-inline' is needed for reveal.js presentations with inline styles
+		# If you want stricter CSP, consider using nonces or hashes for inline styles
+		Content-Security-Policy "default-src 'none'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; script-src 'self' https://analytics.thetillhoff.de https://cdnjs.cloudflare.com; img-src 'self'; connect-src https://analytics.thetillhoff.de; font-src 'self' https://cdnjs.cloudflare.com;"
 	}
 }
 
