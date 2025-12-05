@@ -11,6 +11,7 @@
   /* border-color: hsla(from var(--color) h s calc(l - 10%) a); */
 
   --font-size: 1rem;
+  --border-radius: 5px;
 }
 
 @media (prefers-color-scheme: dark) {

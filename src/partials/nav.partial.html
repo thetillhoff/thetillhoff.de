@@ -1,28 +1,60 @@
 <nav class="fullWidth verticalCenteredContent horizontalCenteredContent">
   <div class="fullWidth textContainer horizontalCenteredContent">
-    <a href="/" class="logo">
-      thetillhoff
-    </a>
+    <a href="/" class="logo"> thetillhoff </a>
     <div class="rtl landscape">
       <a href="/">About</a>
       <a href="/slides/">Slides</a>
-      <a href="/reading-notes/">Reading Notes</a>
+      <a href="/blog/">Blog</a>
+      <!-- <a href="/reading-notes/">Reading Notes</a> -->
     </div>
   </div>
   <!-- instead of having the colored line as bottom-border of nav, insert it here as <hr> -->
 </nav>
+<input
+  type="checkbox"
+  id="portraitNav-toggle"
+  class="hidden"
+  autocomplete="off"
+/>
 <label id="portraitNav-label" for="portraitNav-toggle" class="portrait">
-  <svg role="img" viewBox="0 0 400 250" class="button icon" stroke="currentcolor">
+  <svg
+    role="img"
+    viewBox="0 0 400 250"
+    class="button icon"
+    stroke="currentcolor"
+  >
     <g id="three-stripes">
-      <line stroke-width="50" y2="25" x2="400" y1="25" x1="0"/>
-      <line stroke-width="50" y2="125" x2="400" y1="125" x1="0"/>
-      <line stroke-width="50" y2="225" x2="400" y1="225" x1="0"/>
+      <line stroke-width="50" y2="25" x2="400" y1="25" x1="0" />
+      <line stroke-width="50" y2="125" x2="400" y1="125" x1="0" />
+      <line stroke-width="50" y2="225" x2="400" y1="225" x1="0" />
+    </g>
+    <g id="close-x">
+      <!-- X icon: square centered in 400x250 viewBox (200x200 square at center) -->
+      <line
+        stroke-width="50"
+        x1="100"
+        y1="25"
+        x2="300"
+        y2="225"
+        stroke-linecap="round"
+      />
+      <line
+        stroke-width="50"
+        x1="300"
+        y1="25"
+        x2="100"
+        y2="225"
+        stroke-linecap="round"
+      />
     </g>
   </svg>
 </label>
-<input type="checkbox" id="portraitNav-toggle" class="hidden" autocomplete="off">
-<div id="portraitNav" class="portrait hidden vertical fullWidth horizontalCenteredContent">
+<div
+  id="portraitNav"
+  class="portrait hidden vertical fullWidth horizontalCenteredContent"
+>
   <a href="/">About</a>
   <a href="/slides/">Slides</a>
-  <a href="/reading-notes/">Reading Notes</a>
+  <a href="/blog/">Blog</a>
+  <!-- <a href="/reading-notes/">Reading Notes</a> -->
 </div>

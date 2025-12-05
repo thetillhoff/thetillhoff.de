@@ -7,7 +7,9 @@ nav {
 }
 
 nav > div {
-  padding-left: 1rem; padding-right: 1rem; min-height: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  min-height: 5rem;
 }
 
 nav a {
@@ -16,7 +18,7 @@ nav a {
 
 nav a.logo {
   /* color: #000; */
-  font-size: calc(2*var(--font-size));
+  font-size: calc(2 * var(--font-size));
   font-weight: bold;
   text-decoration: none;
   padding-left: 0;
@@ -27,8 +29,10 @@ nav a:not(.logo) {
 }
 
 /* colors */
-nav a:not(.logo):hover {
+nav a:not(.logo):hover,
+#portraitNav > a:hover {
   background-color: var(--highlight-color);
+  border-radius: var(--border-radius);
   /* background-color: rgba(var(--highlight-rgb),0.5); */
   /* backdrop-filter: brightness(calc(1+0.5)); */
   /* backdrop-filter: brightness(calc(var(--brightness) + 0.5)); */
@@ -47,17 +51,46 @@ nav a:not(.logo):hover {
   margin-right: 1.5rem;
   margin-top: 1.5rem;
   width: 3rem;
+  user-select: none;
+}
+
+#portraitNav-label:focus,
+#portraitNav-label:active {
+  outline: none;
+}
+
+/* Menu icon toggle: show three-stripes by default, X when checked */
+#portraitNav-label #close-x {
+  display: none;
+}
+
+#portraitNav-toggle:checked ~ #portraitNav-label #three-stripes {
+  display: none;
+}
+
+#portraitNav-toggle:checked ~ #portraitNav-label #close-x {
+  display: block;
 }
 
 #portraitNav-toggle:checked ~ #portraitNav {
-  display: inherit;
+  display: flex;
 }
 #portraitNav-toggle:checked ~ div {
   /* there is only one div directly below the body tag and it represents the pages contents */
   display: none;
 }
 
-
 #portraitNav > a {
+  padding: 1rem;
   margin: 1rem;
+}
+
+/* Prevent links from appearing selected when menu is toggled */
+#portraitNav > a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+#portraitNav > a:focus {
+  outline: none;
 }

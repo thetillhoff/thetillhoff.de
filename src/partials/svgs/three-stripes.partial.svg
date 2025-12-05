@@ -1,7 +1,0 @@
-<svg role="img" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" style="display:none;">
- <g id="three-stripes">
-  <line stroke-width="50" y2="25" x2="400" y1="25" x1="0"/>
-  <line stroke-width="50" y2="125" x2="400" y1="125" x1="0"/>
-  <line stroke-width="50" y2="225" x2="400" y1="225" x1="0"/>
- </g>
-</svg>

@@ -8,14 +8,14 @@
 {{- define "content" -}}
 
 <div class="fullWidth vertical textContainer">
-  <h1>Reading Notes</h1>
+  <h1>Blog</h1>
   <p>
-    As I'm a fan of reducing duplicate work and of open source, I'm using this corner of my website to publish notes on books or articles I read.
+    Inspiration, thoughts, ideas, and more.
   </p>
   <ul>
     {{ range $index, $element := .childMeta }}
     <li>
-      <a href="/reading-notes/{{ $index }}/">{{ $element.title }} by {{ $element.author }}</a>
+      <a href="{{ $index }}/">{{ $element.title }}</a>
     </li>
     {{ end }}
   </ul>

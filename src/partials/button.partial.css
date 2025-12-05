@@ -1,33 +1,36 @@
 /* general styling */
 button,
 a.button {
-  /* positioning, size */
-  /* 0.5 is kind of a random number, but applied on all button paddings */
-  padding: calc( 1rem * 0.5);
-  height: 1rem;
-  min-width: 1rem;
-
+  /* Base styling */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 
-  font-size: inherit;
+  /* Typography */
+  font-size: 1rem;
+  line-height: 1;
+  font-family: inherit;
 
-  /* unify button styling */
-  /* display: inline; */
-  float: left;
-  outline: none;
+  /* Spacing */
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  min-width: 2.5rem;
+
+  /* Visual */
+  border: 2px solid currentColor;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: currentColor;
+
+  /* Interaction */
   cursor: pointer;
   text-decoration: none;
-
-  /* border */
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 5px;
-
-  margin-left: 1rem;
-
-  /* color */
-  color: currentColor;
+  outline: none;
   transition: background-color 0.2s ease-in-out;
+
+  /* Layout */
+  float: left;
 }
 
 /* colors */
@@ -42,34 +45,25 @@ a.button:first-child {
 }
 
 /* sizes */
-button,
-a.button {
-  padding: calc(1rem * 0.6);
-  height: 1rem;
-  min-width: 1rem;
-  font-size: 1rem;
-}
-
 button.large,
 a.button.large {
-  padding: calc(1rem * 1.2 * 0.6);
-  height: calc(1rem * 1.2);
-  min-width: calc(1rem * 1.2);
-  font-size: calc(1rem * 1.2);
+  font-size: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  min-width: 3rem;
 }
+
 button.big,
 a.button.big {
-  padding: calc(1rem * 1.4 * 0.6);
-  height: calc(1rem * 1.4);
-  min-width: calc(1rem * 1.4);
-  font-size: calc(1rem * 1.4);
+  font-size: 1.4rem;
+  padding: 0.7rem 1.4rem;
+  min-width: 3.5rem;
 }
+
 button.huge,
 a.button.huge {
-  padding: calc(1rem * 1.6 * 0.6);
-  height: calc(1rem * 1.6);
-  min-width: calc(1rem * 1.6);
-  font-size: calc(1rem * 1.6);
+  font-size: 1.6rem;
+  padding: 0.8rem 1.6rem;
+  min-width: 4rem;
 }
 
 /* inline */
@@ -94,47 +88,56 @@ a.button.borderless {
 
 .group > button:first-child,
 .group > a.button:first-child {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
   border-left: solid;
 }
 
 .group > button:last-child,
 .group > a.button:last-child {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
-
 
 /* icon button */
 button.icon,
 a.button.icon {
-  height: calc(1rem * 1.1);
-  min-width: calc(1rem * 1.1);
-  /* padding: calc(1rem * 0.5 - (1rem * 1.2 - 1rem) / 2); */
-
-  /* center contents */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  /* Square icon buttons - padding controls size */
+  padding: 0.5rem;
+  min-width: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   aspect-ratio: 1/1;
 }
-button.large .icon,
-a.button.large .icon {
-  height: calc(1rem * 1.1 * 1.2);
-  min-width: calc(1rem * 1.1 * 1.2);
-  /* padding: calc(1rem * 1.2 * 0.5 - (1rem * 1.2 * 1.2 - 1rem * 1.2) / 2); */
+
+button.large.icon,
+a.button.large.icon {
+  padding: 0.6rem;
+  min-width: 3rem;
+  width: 3rem;
+  height: 3rem;
 }
-button.big .icon,
-a.button.big .icon {
-  height: calc(1rem * 1.1 * 1.4);
-  min-width: calc(1rem * 1.1 * 1.4);
-  /* padding: calc(1rem * 1.4 * 0.5 - (1rem * 1.2 * 1.4 - 1rem * 1.4) / 2); */
+
+button.big.icon,
+a.button.big.icon {
+  padding: 0.7rem;
+  min-width: 3.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
-button.huge .icon,
-a.button.huge .icon {
-  height: calc(1rem * 1.1 * 1.6);
-  min-width: calc(1rem * 1.1 * 1.6);
-  /* padding: calc(1rem * 1.6 * 0.5 - (1rem * 1.2 * 1.6 - 1rem * 1.6) / 2); */
+
+button.huge.icon,
+a.button.huge.icon {
+  padding: 0.8rem;
+  min-width: 4rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+/* Icon sizing within buttons */
+button.icon svg,
+a.button.icon svg {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
 }

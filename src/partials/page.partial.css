@@ -14,8 +14,8 @@ body {
 }
 
 * {
-  font-family: "Open Sans", sans-serif;
-  box-sizing: content-box; /* remove strange behaviour of some native elements - looking at you _button_! */
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box; /* padding and borders are included in width/height calculations */
 
   /* antialiasing */
   /* -webkit-font-smoothing: antialiased;
@@ -37,7 +37,9 @@ a {
   display: inline-block; /* removes weird underline on non-existant space behind link */
 }
 
-a:link, a:visited, a:active {
+a:link,
+a:visited,
+a:active {
   color: inherit;
 }
 
@@ -46,7 +48,6 @@ svg {
   width: 100%;
   height: 100%;
 }
-
 
 /* responsiveness */
 .portrait {
@@ -64,6 +65,31 @@ svg {
   }
 }
 
-li:not(:last-child) { 
-  margin-bottom: 1rem;  
+li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* Markdown-style prefixes for headlines (only within textContainer) */
+.textContainer h1::before {
+  content: '# ';
+}
+
+.textContainer h2::before {
+  content: '## ';
+}
+
+.textContainer h3::before {
+  content: '### ';
+}
+
+.textContainer h4::before {
+  content: '#### ';
+}
+
+.textContainer h5::before {
+  content: '##### ';
+}
+
+.textContainer h6::before {
+  content: '###### ';
 }

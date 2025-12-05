@@ -1,0 +1,14 @@
+{{ template "partials/page.partial.html" . -}}
+
+{{- define "head" -}}
+<title>thetillhoff.de</title>
+<meta name="description" content="Hey there! 👋 I'm Till. This is my website.">
+{{- end }}
+
+{{- define "content" -}}
+
+<div class="fullWidth vertical textContainer">
+  {{ .content }}
+</div>
+
+{{- end }}

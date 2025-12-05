@@ -1,11 +1,7 @@
 <div class="fullWidth vertical textContainer">
   <p>
-  {{ if .breadcrumbs -}}
-    {{- $fullPath := "" -}}
-    {{- range $subPath := .breadcrumbs -}}
-      {{- $fullPath = concat $fullPath "/" $subPath -}}
-      &gt;&nbsp;<a href="{{ $fullPath }}">/{{- $subPath -}}</a>&nbsp;
-    {{- end -}}
-  {{- end }}
+  {{- range .breadcrumbs -}}
+    &gt;&nbsp;<a href="{{ .Path }}">/{{- .Name -}}</a>&nbsp;
+  {{- end -}}
   </p>
 </div>
