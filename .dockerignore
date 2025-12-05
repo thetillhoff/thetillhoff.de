@@ -1,7 +1,9 @@
 # Ignore everything, then whitelist explicitely
 **
 
+# Whitelist temingoignore
+!/.temingoignore
 # Whitelist Caddyfile
 !/Caddyfile
-# Whitelist rendered website
-!/output/**
+# Whitelist source files
+!/src/**

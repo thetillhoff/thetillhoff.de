@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v1.1.0
+- Build with temingo image as builder, so output folder is added to gitignore now.
+
 ## v1.0.22
 - Update umami id, since the used umami instance changed
 
