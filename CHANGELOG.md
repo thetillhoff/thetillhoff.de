@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.1.2
+
+- Add robots.txt to disallow crawlers from indexing slides and keybase.txt
+
 ## v1.1.1
 
 - Update Caddyfile settings
