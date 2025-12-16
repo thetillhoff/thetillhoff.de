@@ -1,18 +1,15 @@
 <nav class="fullWidth verticalCenteredContent horizontalCenteredContent">
   <div class="navHeader fullWidth textContainer horizontalCenteredContent">
     <a href="/" class="logo"> thetillhoff </a>
-    <div class="navLinks rtl landscape">
-      <a href="/">About</a>
-      <a href="/slides/">Slides</a>
-      <a href="/blog/">Blog</a>
-      <!-- <a href="/reading-notes/">Reading Notes</a> -->
+    <div class="rtl">
+      {{ template "partials/navLinks.partial.html" . -}}
     </div>
   </div>
   <hr />
   {{ template "partials/breadcrumbs.partial.html" . -}}
   <details
-    id="portraitNav"
-    class="portrait vertical fullWidth horizontalCenteredContent"
+    id="navMenu"
+    class="navMenu vertical fullWidth horizontalCenteredContent"
   >
     <summary aria-label="Menu">
       <svg aria-hidden="true" viewBox="0 0 400 250" stroke="currentcolor">
@@ -43,10 +40,7 @@
       </svg>
     </summary>
     <div class="vertical fullWidth horizontalCenteredContent">
-      <a href="/">About</a>
-      <a href="/slides/">Slides</a>
-      <a href="/blog/">Blog</a>
-      <!-- <a href="/reading-notes/">Reading Notes</a> -->
+      {{ template "partials/navLinks.partial.html" . -}}
     </div>
   </details>
 </nav>

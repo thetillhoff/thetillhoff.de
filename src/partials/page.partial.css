@@ -53,22 +53,6 @@ svg {
   height: 100%;
 }
 
-/* responsiveness */
-.portrait {
-  display: inherit;
-}
-.landscape {
-  display: none;
-}
-@media only screen and (orientation: landscape) {
-  .portrait {
-    display: none;
-  }
-  .landscape {
-    display: inherit;
-  }
-}
-
 li:not(:last-child) {
   margin-bottom: 1rem;
 }
