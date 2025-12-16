@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
-    <!--
-      preloading stylesheet instead of waiting for rendering to require it
-      onload part helps some browsers to re-call the handler after changing the rel attribute
-      noscript directly afterwards in case js is disabled
-    -->
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-      <link rel="stylesheet" href="/style.css"> <!-- place stylesheet reference before color-scheme to prevent flickering -->
-    </noscript>
-    
-    <meta name="color-scheme" content="dark light"> <!-- automatically takes care of all the dark and light mode default features :) and is faster than setting it via css -->
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <!-- place stylesheet reference before color-scheme to prevent flickering -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- automatically takes care of all the dark and light mode default features :) and is faster than setting it via css -->
+    <meta name="color-scheme" content="dark light" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     {{ template "head" . }}
   </head>
   <body>
@@ -24,6 +18,10 @@
     {{ template "partials/breadcrumbs.partial.html" . -}}
     {{ template "content" . }}
     {{ template "partials/footer.partial.html" . -}}
-    <script defer src="https://analytics.thetillhoff.de/script.js" data-website-id="b231247b-1848-45f0-a1a8-4745d7b84d3d"></script>
+    <script
+      defer
+      src="https://analytics.thetillhoff.de/script.js"
+      data-website-id="b231247b-1848-45f0-a1a8-4745d7b84d3d"
+    ></script>
   </body>
 </html>

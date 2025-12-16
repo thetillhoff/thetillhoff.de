@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.1.4
+
+- Remove unnecessary preload
+
 ## v1.1.3
 
 - Add stylesheet preloading
