@@ -27,8 +27,7 @@ nav a.logo {
 }
 
 /* colors */
-nav a:not(.logo):hover,
-#navMenu a:hover {
+nav a:not(.logo):hover {
   background-color: var(--highlight-color);
   border-radius: var(--border-radius);
   /* background-color: rgba(var(--highlight-rgb),0.5); */
@@ -123,10 +122,6 @@ nav > .navHeader > .rtl {
 #navMenu a {
   padding: 1rem;
   margin: 1rem;
-}
-
-/* Prevent links from appearing selected when menu is toggled */
-#navMenu a {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }

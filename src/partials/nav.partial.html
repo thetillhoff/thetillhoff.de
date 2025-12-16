@@ -1,16 +1,11 @@
 <nav class="fullWidth verticalCenteredContent horizontalCenteredContent">
   <div class="navHeader fullWidth textContainer horizontalCenteredContent">
     <a href="/" class="logo"> thetillhoff </a>
-    <div class="rtl">
-      {{ template "partials/navLinks.partial.html" . -}}
-    </div>
+    <div class="rtl">{{ template "partials/navLinks.partial.html" . -}}</div>
   </div>
   <hr />
   {{ template "partials/breadcrumbs.partial.html" . -}}
-  <details
-    id="navMenu"
-    class="navMenu vertical fullWidth horizontalCenteredContent"
-  >
+  <details id="navMenu" class="vertical fullWidth horizontalCenteredContent">
     <summary aria-label="Menu">
       <svg aria-hidden="true" viewBox="0 0 400 250" stroke="currentcolor">
         <g id="three-stripes">
