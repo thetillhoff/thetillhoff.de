@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.1.3
+
+- Add stylesheet preloading
+- Adjust umami script ref
+
 ## v1.1.2
 
 - Add robots.txt to disallow crawlers from indexing slides and keybase.txt
