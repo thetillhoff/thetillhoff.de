@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v1.2.0
+
+- Refactor (mobile and desktop) navigation for accessibility improvements
+- Simplify nav HTML/CSS (remove redundancy, extract `navLinks.partial.html`)
+- Simplify layout CSS by removing global `div { display: flex; }` in favor of explicit flex utilities
+
 ## v1.1.4
 
 - Remove unnecessary preload
