@@ -2,9 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/style.css"> <!-- place stylesheet reference before color-scheme to prevent flickering -->
+
+    <!--
+      preloading stylesheet instead of waiting for rendering to require it
+      onload part helps some browsers to re-call the handler after changing the rel attribute
+      noscript directly afterwards in case js is disabled
+    -->
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="/style.css"> <!-- place stylesheet reference before color-scheme to prevent flickering -->
+    </noscript>
+    
     <meta name="color-scheme" content="dark light"> <!-- automatically takes care of all the dark and light mode default features :) and is faster than setting it via css -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     {{ template "head" . }}
   </head>
   <body>
