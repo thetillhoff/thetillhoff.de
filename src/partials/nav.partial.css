@@ -1,12 +1,14 @@
 nav {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  position: relative;
 
-  border-bottom: 4px solid;
-  border-color: var(--main-color);
+  /* border-bottom: 4px solid; */
+  /* border-color: var(--main-color); */
 }
 
-nav > div {
+nav > .navHeader {
   padding-left: 1rem;
   padding-right: 1rem;
   min-height: 5rem;
@@ -24,10 +26,6 @@ nav a.logo {
   padding-left: 0;
 }
 
-nav a:not(.logo) {
-  margin-right: 2rem;
-}
-
 /* colors */
 nav a:not(.logo):hover,
 #portraitNav > a:hover {
@@ -38,12 +36,25 @@ nav a:not(.logo):hover,
   /* backdrop-filter: brightness(calc(var(--brightness) + 0.5)); */
 }
 
+/* Only apply desktop link spacing to the desktop nav links */
+.navLinks > a:not(.logo) {
+  margin-right: 2rem;
+}
+
+/* divider between header and nav */
+nav > hr {
+  width: 100%;
+  border: none;
+  border-bottom: 4px solid var(--main-color);
+  margin: 0;
+}
+
 /* portraitNav */
 #portraitNav {
   padding: 1rem 0;
 }
 
-#portraitNav-label {
+#portraitNav > summary {
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -52,45 +63,62 @@ nav a:not(.logo):hover,
   margin-top: 1.5rem;
   width: 3rem;
   user-select: none;
+  list-style: none;
+
+  /* make it look like our icon buttons */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
 }
 
-#portraitNav-label:focus,
-#portraitNav-label:active {
-  outline: none;
+#portraitNav > summary:hover {
+  background-color: var(--highlight-color);
 }
 
-/* Menu icon toggle: show three-stripes by default, X when checked */
-#portraitNav-label #close-x {
+/* Remove default marker/triangle */
+#portraitNav > summary::-webkit-details-marker {
   display: none;
 }
 
-#portraitNav-toggle:checked ~ #portraitNav-label #three-stripes {
+/* Menu icon toggle: show three-stripes by default, X when open */
+#portraitNav #close-x {
   display: none;
 }
 
-#portraitNav-toggle:checked ~ #portraitNav-label #close-x {
+#portraitNav[open] #three-stripes {
+  display: none;
+}
+
+#portraitNav[open] #close-x {
   display: block;
 }
 
-#portraitNav-toggle:checked ~ #portraitNav {
-  display: flex;
-}
-#portraitNav-toggle:checked ~ div {
-  /* there is only one div directly below the body tag and it represents the pages contents */
+/* When portrait menu is open, hide page content (but keep footer visible) */
+nav:has(#portraitNav[open]) ~ main,
+nav:has(#portraitNav[open]) ~ #breadcrumbs {
   display: none;
 }
 
-#portraitNav > a {
+/* Ensure portrait menu stays hidden in landscape (override #portraitNav display:flex) */
+@media only screen and (orientation: landscape) {
+  #portraitNav {
+    display: none;
+  }
+}
+
+#portraitNav a {
   padding: 1rem;
   margin: 1rem;
 }
 
 /* Prevent links from appearing selected when menu is toggled */
-#portraitNav > a {
+#portraitNav a {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }
 
-#portraitNav > a:focus {
+#portraitNav a:focus {
   outline: none;
 }

@@ -25,6 +25,10 @@ body {
   -moz-osx-font-smoothing: auto; */
 }
 
+main {
+  width: 100%;
+}
+
 p {
   line-height: 1.5;
 }
@@ -70,6 +74,16 @@ li:not(:last-child) {
 }
 
 /* Markdown-style prefixes for headlines (only within textContainer) */
+
+.textContainer h1::before,
+.textContainer h2::before,
+.textContainer h3::before,
+.textContainer h4::before,
+.textContainer h5::before,
+.textContainer h6::before {
+  opacity: 0.5;
+}
+
 .textContainer h1::before {
   content: '# ';
 }

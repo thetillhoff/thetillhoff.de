@@ -15,9 +15,13 @@
   </head>
   <body>
     {{ template "partials/nav.partial.html" . -}}
-    {{ template "partials/breadcrumbs.partial.html" . -}}
-    {{ template "content" . }}
+
+    <main>
+      {{ template "content" . }}
+    </main>
+
     {{ template "partials/footer.partial.html" . -}}
+
     <script
       defer
       src="https://analytics.thetillhoff.de/script.js"
