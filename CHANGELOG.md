@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.2.1
+
+- Fix content centering in main element
+
 ## v1.2.0
 
 - Refactor (mobile and desktop) navigation for accessibility improvements
