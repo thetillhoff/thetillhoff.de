@@ -1,6 +1,7 @@
 .textContainer {
   /* max-width: 50rem; */
   max-width: 1150px;
+  width: 100%;
   padding-left: 2rem;
   padding-right: 2rem;
   margin-left: auto;
