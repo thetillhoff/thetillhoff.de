@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.2.2
+
+- Remove fullWidth from textContainer elements
+
 ## v1.2.1
 
 - Fix content centering in main element
