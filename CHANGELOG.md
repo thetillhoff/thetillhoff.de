@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.2.4
+
+- Pin GitHub Actions to SHA refs
+
 ## v1.2.3
 
 - Fix centering of textContainer element
