@@ -8,6 +8,7 @@
 {{- define "content" -}}
 
 <div class="vertical textContainer">
+  <time datetime="{{ .meta.date }}">{{ .meta.date }}</time>
   {{ .content }}
 </div>
 

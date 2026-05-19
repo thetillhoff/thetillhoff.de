@@ -13,9 +13,9 @@
     Inspiration, thoughts, ideas, and more.
   </p>
   <ul>
-    {{ range $index, $element := .childMeta }}
+    {{ range sortBy "date" .childMeta }}
     <li>
-      <a href="{{ $index }}/">{{ $element.title }}</a>
+      <a href="{{ .key }}/">{{ .value.date }} - {{ .value.title }}</a>
     </li>
     {{ end }}
   </ul>
