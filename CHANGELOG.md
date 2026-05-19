@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## v1.3.0
+
+- Sort blog posts by date, show date in listing
+- Add blogposts
+- Add date display to individual post pages
+- Bump temingo to v2.5.0
+- Add Makefile and DEVELOPMENT.md
+- Remove unused metatemplate
+
 ## v1.2.4
 
 - Pin GitHub Actions to SHA refs

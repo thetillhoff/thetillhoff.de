@@ -1,0 +1,61 @@
+# Why simpler wins
+
+The instinct to choose simplicity over completeness isn't new to the web. It's a pattern that has played out across almost every layer of technology - and outside it - for decades. The outcome is consistent enough that it should probably be a rule.
+
+## The internet proved it first
+
+The internet was built on open standards. No single company owned TCP/IP, HTTP, HTML, SMTP, or DNS. Anyone could implement them, build on them, compete on top of them. That's what made the web an infrastructure rather than a product. It's also what made it resilient: no one could take it away, because no one owned it.
+
+A walled garden is a bet against that pattern. It limits your addressable market to the people willing to enter - and stay inside - your walls. It creates friction at every boundary, and friction is an invitation. Someone simpler will always step into the gap, and if they're built on open standards, you can't buy them out. There's no single owner to acquire, no license to revoke. Your only move is to make the walls higher and the exit more expensive, which tends to accelerate exactly the resentment you're trying to contain.
+
+## The pattern in tech
+
+Schools still teach the OSI model: a seven-layer framework for how networks should communicate, carefully designed to be theoretically complete. The internet doesn't run on it. It runs on TCP/IP, a simpler, more pragmatic alternative that didn't try to specify everything perfectly. TCP/IP won not because it was more correct, but because it was more useful. It got out of the way and let people build things.
+
+Linux beat Windows on servers for the same reason - and not just Windows. Before Linux, enterprise servers ran proprietary Unix variants: IBM's AIX, Sun's Solaris, HP-UX. Each was expensive, tied to specific hardware, and required vendor support contracts. Windows Server was the more accessible alternative - managed, GUI-driven, and backed by Microsoft. Linux was bare, configurable, and expected you to know what you were doing. It beat all of them. In a world where you're running thousands of servers, "simple and composable" wins over "complete and managed" every time.
+
+When Yahoo was the internet's homepage - a portal crammed with news, weather, sports, mail, and stock tickers - Google launched with a white page and a search box. It looked unfinished. It won anyway, because it trusted users to know what they wanted and got out of the way.
+
+The same story played out in developer tools. XML tried to be a universal data format: schemas, namespaces, validation, extensibility, a whole ecosystem of specifications. JSON is just objects and arrays. Ask any engineer today whether they'd reach for XML or JSON when building something new - the silence before the laugh is your answer. The same played out for web APIs: SOAP was the enterprise standard, a framework so heavy and ceremonial it needed dedicated tooling just to read its output. REST said "just use HTTP the way it was designed." Most engineers today have used REST without ever having heard of SOAP - which is exactly the point. Git replaced centralized version control not by being more powerful but by making branching and merging simple enough to actually use.
+
+Flash is perhaps the sharpest lesson from the web itself. For years, Flash was the default way to put rich media, video, and interactive content on a page. It was proprietary, required a closed runtime from Adobe, and ran outside the browser's security model. When Apple refused to support it on the iPhone, it forced the question: could open web standards - HTML5, CSS, JavaScript - do what Flash did? It took a few years, but the answer was yes. Flash is dead. The open standards aren't.
+
+The pattern is consistent: when a simpler alternative exists and the complex one hasn't already locked in the ecosystem, the simpler one wins. Not always immediately. Not without resistance. But eventually.
+
+## Beyond software
+
+The same pattern holds outside of technology.
+
+The ISO shipping container is the clearest non-technical example. Before it, cargo was loaded piece by piece - slow, expensive, and labour-intensive. The standard steel box didn't just make individual shipments faster. It restructured the entire global logistics chain, because every ship, crane, truck, and port was built around the same dimensions. Any manufacturer could build a compliant container, any port could handle it. That openness is what made it universal, and universality is what made it transformative.
+
+The Euro pallet works the same way, one layer down. A standardized wooden platform - 1200×800mm - that every warehouse shelf, forklift, and truck bed on the continent is built around. You can move goods from any manufacturer to any warehouse without touching the product, because the interface is agreed on. Simple, open, and so embedded in the infrastructure that most people never think about it.
+
+USB tells a similar story for personal computing. Before it, connecting a peripheral meant navigating a chaos of incompatible connectors - serial ports, parallel ports, PS/2, proprietary plugs for everything else. One open standard replaced all of it. And crucially, it could still improve: USB-A required you to flip the plug until you got it right - USB-C doesn't. The standard evolved without abandoning compatibility. That's what good standards do.
+
+The metric system is perhaps the oldest example of a simple open standard defeating a fragmented one. Imperial units aren't a system - they're an accumulation of historical conventions from different places and times, each locally sensible, collectively incoherent. The metric system replaced them with powers of ten and a set of internationally agreed base units. It has been the global scientific and commercial standard for over a century.
+
+It's worth noting that several of these standards got their initial momentum through regulation, particularly from the EU. The Euro pallet became universal partly because European logistics policy pushed it. USB-C as the common charger for mobile devices was mandated by EU law before the industry would have converged on its own. The metric system spread as much through official adoption as through voluntary preference. Standards often need a push - and sometimes that push is political.
+
+Lego is an instructive counterexample. The stud-and-tube coupling system means every Lego brick ever made is compatible with every other, across sixty years of production. That's an extraordinary feat of standardization. But it's a private standard. Lego controls it, and the value it creates flows largely back to Lego. The benefit of the standard was real; the openness came only after the core patent expired - and even then, Lego fought clones through courts for decades more. The contrast with the shipping container is sharp: the openness of the container standard is exactly what made it global infrastructure rather than a single company's product.
+
+Tax codes illustrate what happens at the other extreme: when complexity itself becomes the product. No single decision made tax rules span tens of thousands of pages. Thousands of lobbying decisions did, each carving out an exception for someone who could afford to ask. A system that complex doesn't just happen to be hard to understand - it functions best for those who can afford professionals to navigate it on their behalf. There's a reason the same observation keeps appearing in tax policy research: complex systems tend to work for the people who shaped them and against the people who didn't. The financial system more broadly has reached a similar point - too intricate for any individual to fully grasp, which means accountability moves to whoever controls the interpretation. Simplicity, in these cases, isn't just efficient. It's a precondition for fairness.
+
+## Open source: the software version
+
+Simplicity and openness had their most dramatic effect in software. The most critical infrastructure of the modern internet is overwhelmingly open source - meaning anyone can read the code, use it, modify it, and contribute back.
+
+Linux runs the servers that power the internet, the world's supercomputers, and via Android, the majority of the world's smartphones. Apache and Nginx together [serve over half of all websites](https://w3techs.com/technologies/overview/web_server). OpenSSL secures the connections. PostgreSQL and MySQL store the data. Firefox broke Internet Explorer's monopoly on the browser and kept the web from becoming a single company's product. Git became the foundation of how software is developed worldwide. WordPress [powers over 40% of all websites](https://w3techs.com/technologies/details/cm-wordpress). Python became the dominant language of data science and AI. Kubernetes became the standard for running applications at scale. VS Code became [the world's most used code editor](https://survey.stackoverflow.co/2024/technology#most-popular-technologies-new-collab-tools).
+
+None of these were built by a single company in secret. They were built in the open, by communities of contributors who could inspect what existed, improve it, and share those improvements with everyone. The result is software that no single company could have funded or staffed alone - and that no single company can take away.
+
+This is the real efficiency argument for openness. When a standard or a codebase is shared, it concentrates effort that would otherwise be fragmented across dozens of parallel, incompatible implementations. Companies, research institutions, open source advocates, and individual contributors who would otherwise be building the same thing separately are all pushing in the same direction. No single engineering team can match that. And because no single entity controls it, there's no single point of failure - no company going bankrupt, getting acquired, or changing direction takes the whole foundation down with it. The decentralization that matters here isn't about distributing every workload. It's about standardizing the interface so that anyone can build on top of it independently, without asking permission or paying a fee.
+
+But there's a deeper reason open source matters beyond efficiency: control. When your core business runs on proprietary software, the vendor sets the terms - and can change them whenever they like. IBM and SAP built entire business models on exactly this. Companies whose ERP systems, payroll, or supply chain management ran on SAP had no exit. Migrating away would take years and cost more than staying. So SAP could - and did - raise prices, change licensing, and restructure support contracts knowing that customers were captive. IBM played the same game with enterprise infrastructure for decades. The lock-in wasn't accidental. It was the product. Open source breaks that dynamic. When the code is yours to read, run, and fork, no single vendor can hold your operations hostage.
+
+## Open standards: the agreement layer
+
+The same principle scales up to agreements between organizations. Wi-Fi and Bluetooth are open standards - any manufacturer can build compliant hardware, which is why your headphones work with your laptop, your phone - any laptop, any phone - without any configuration. WebRTC is what makes video calls work directly in a browser. OAuth is the standard behind "Log in with Google" and "Log in with GitHub" - a shared protocol that lets different services trust each other's authentication without handing over passwords. YAML is the configuration format that GitHub Actions, Docker, and Kubernetes all rely on. PDF is now an open ISO standard, not a proprietary Adobe format.
+
+The organizations behind these agreements - the W3C, the IETF, the IEEE - exist to publish standards that nobody owns but everyone can use. The RFC process that gave the internet TCP/IP, HTTP, SMTP, and DNS is still running, still open, still producing the foundations that everything else is built on.
+
+The instinct that made the internet work - start simple, stay open, let others build on it - doesn't just produce better technology. It produces technology that's harder to displace, and harder to hold hostage. That's not idealism. It's just how the pattern plays out.
