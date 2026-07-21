@@ -12,8 +12,8 @@ temingo        # one-shot build to output/
 ## Tech Stack
 
 | Layer | Tool | Version |
-|-------|------|---------|
-| Static site generator | [Temingo](https://github.com/thetillhoff/temingo) | 2.1.4 |
+| ------- | ------ | --------- |
+| Static site generator | [Temingo](https://github.com/thetillhoff/temingo) | 2.6.0 |
 | Web server | Caddy | 2.11.2 |
 | Container | Docker multi-arch | linux/amd64, linux/arm64 |
 | Analytics | Self-hosted Umami | — |
@@ -22,7 +22,7 @@ No JavaScript frameworks, no CSS preprocessors, no external fonts.
 
 ## Project Structure
 
-```
+```text
 src/                       # All source content (temingo input)
 ├── index.template.html    # Homepage
 ├── style.template.css     # Global styles
@@ -47,7 +47,7 @@ output/                    # Generated HTML — gitignored, not edited manually
 ## Temingo File Conventions
 
 | Extension | Behaviour |
-|-----------|-----------|
+| ----------- | ----------- |
 | `.template.*` | Rendered to a single output file |
 | `.metatemplate.*` | Rendered once per child `meta.yaml` entry |
 | `.partial.*` | Registered as reusable snippet, no direct output |
@@ -77,6 +77,15 @@ mkdir src/slides/YYYY-MM-DD-Title
 
 See `src/slides/README.md` for Reveal.js syntax.
 
+### Hide a post or slide deck (draft/WIP)
+
+Add `publish: false` to the item's `meta.yaml`. The page is still built and reachable by direct URL - it is only excluded from listing pages.
+
+```yaml
+publish: false  # hidden from listing
+# publish: true or absent → shown (default)
+```
+
 ## Styling
 
 CSS variables live in `:root` in `src/style.template.css`. Dark/light mode is handled via `prefers-color-scheme` media queries — no JavaScript. Component-scoped styles live in `src/partials/*.partial.css` and are included from the relevant HTML partials.
@@ -86,11 +95,12 @@ CSS variables live in `:root` in `src/style.template.css`. Dark/light mode is ha
 All deploys go through GitHub Actions:
 
 | Trigger | Action |
-|---------|--------|
+| --------------- | ------ |
 | Any push | Build Docker image, push `ghcr.io/thetillhoff/thetillhoff.de:<sha>` + `:latest` |
 | Version tag `vX.Y.Z` | Validate CHANGELOG entry, build + push `:<tag>` + `:latest` |
 
 **Release process:**
+
 1. Add entry to `CHANGELOG.md` under the new version.
 2. `git tag vX.Y.Z && git push origin vX.Y.Z`
 
@@ -113,7 +123,7 @@ Ports: `80` (website), `8080` (healthcheck: `"I'm healthy!"`).
 ## Security Headers (Caddyfile)
 
 | Header | Value |
-|--------|-------|
+| -------- | ------- |
 | Cache-Control | `public, max-age=3600, must-revalidate` |
 | HSTS | `max-age=31536000` |
 | X-Frame-Options | `DENY` |

@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v1.4.0
+
+- Add blogposts
+- Sort blog posts by reverse date
+- Add `publish: false` support to hide posts/slides from listings without removing them
+- Bump temingo to v2.6.0
+
 ## v1.3.0
 
 - Sort blog posts by date, show date in listing
