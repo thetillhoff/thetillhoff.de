@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.4.2
+
+- Publish how-standards-evolve blog post
+- Expand and polish how-hard-can-email-be draft
+
 ## v1.4.1
 
 - Fix draft blog posts accidentally published
