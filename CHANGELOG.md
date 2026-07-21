@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.4.1
+
+- Fix draft blog posts accidentally published
+
 ## v1.4.0
 
 - Add blogposts

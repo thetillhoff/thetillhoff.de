@@ -13,7 +13,7 @@
     Inspiration, thoughts, ideas, and more.
   </p>
   <ul>
-    {{ range reverse (sortBy "date" .childMeta) }}
+    {{ range reverse (sortBy "date" (filterBy "publish" true .childMeta)) }}
     <li>
       <a href="{{ .key }}/">{{ .value.date }} - {{ .value.title }}</a>
     </li>
