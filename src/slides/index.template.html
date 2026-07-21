@@ -10,7 +10,7 @@
 <div class="fullWidth vertical textContainer">
   <h1>Slides</h1>
   <ul>
-    {{ range $index, $element := .childMeta }}
+    {{ range $index, $element := filterBy "publish" true .childMeta }}
     <li>
       <a href="/slides/{{ $index }}/">{{ $element.date }} - {{ $element.title }}</a>
     </li>
