@@ -1,0 +1,41 @@
+/* External file, not an inline <style>: temingo escapes `>` to `&gt;` there, which
+   invalidates any rule using a child selector. */
+
+/* Paired with `disableLayout: true`, this lets slides fill the viewport instead of
+   using reveal.js' fixed 960x700 scaled canvas. Matches nested sections too. */
+.reveal .slides section {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: auto;
+	width: auto;
+	padding: 3rem;
+}
+
+.reveal h1 {
+	font-size: 2em;
+}
+
+.reveal img {
+	object-fit: contain;
+	max-height: 70vh;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+p.notes {
+	position: absolute;
+	bottom: 0;
+	font-size: 0.3em;
+}
+
+code {
+	font-family: monospace;
+	background-color: lightgray;
+	display: inline-block;
+}

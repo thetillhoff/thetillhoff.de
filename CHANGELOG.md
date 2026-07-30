@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.4.4
+
+- Fix slides not filling the viewport: temingo escapes `>` to `&gt;` inside `<style>`, which made the whole `.reveal .slides section` rule invalid and dropped it. Moved the deck CSS to `/slides/slides.css`.
+
 ## v1.4.3
 
 - Fix slide decks not rendering: CSP `script-src` blocked the inline `Reveal.initialize()` call, so reveal.js never started. Moved to `/slides/reveal-init.js`.
