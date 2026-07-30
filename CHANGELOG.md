@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v1.4.3
+
+- Fix slide decks not rendering: CSP `script-src` blocked the inline `Reveal.initialize()` call, so reveal.js never started. Moved to `/slides/reveal-init.js`.
+- Align reveal.js JS with the already-referenced CSS version (4.6.1 -> 5.2.1)
+- Add Subresource Integrity to the reveal.js CDN assets
+
 ## v1.4.2
 
 - Publish how-standards-evolve blog post
