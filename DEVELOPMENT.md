@@ -120,6 +120,10 @@ COPY --from=builder /workspace/output/ /usr/share/caddy/
 
 Ports: `80` (website), `8080` (healthcheck: `"I'm healthy!"`).
 
+Env var `UMAMI_WEBSITE_ID`: Caddy's `templates` directive adds the Umami script tag at request time. Without the var, no tag. The script host stays fixed in `page.partial.html` and the CSP. Decision: only the id is configurable, because generic script injection would need matching CSP changes and widen the XSS surface. Reopen if a second script is needed.
+
+The tag sits inside HTML comments with the delimiters `<!--@` and `@-->`. Temingo re-serializes the HTML and mangles a placeholder inside an attribute.
+
 ## Security Headers (Caddyfile)
 
 | Header | Value |

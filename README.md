@@ -102,6 +102,8 @@ To support both dark and light modes, the following adjustments were made:
 ### Analytics
 I was thinking about using server-side analytics, instead of any client-side javascript code. But browsers often cache a whole page, so the server wouldn't get a request for every page load of a user. Javscript still runs on every page load, even if cached. Therefore a lightweight javascript is used, that only transmits data to a selfhosted instance for that analytics tool.
 
+The script is only added when the container has the env var `UMAMI_WEBSITE_ID` set. Without it, the pages contain no script. Example: `docker run -e UMAMI_WEBSITE_ID=<id> -p 80:80 ghcr.io/thetillhoff/thetillhoff.de`.
+
 ## Development
 Use `./temingo -wsv` for continuous building and serving.
 

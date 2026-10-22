@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.5.0
+
+- Add the Umami script only when the env var `UMAMI_WEBSITE_ID` is set. Set it in the deployment, or the site sends no analytics.
+
 ## v1.4.4
 
 - Fix slides not filling the viewport: temingo escapes `>` to `&gt;` inside `<style>`, which made the whole `.reveal .slides section` rule invalid and dropped it. Moved the deck CSS to `/slides/slides.css`.

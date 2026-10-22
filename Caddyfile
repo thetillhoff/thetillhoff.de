@@ -4,6 +4,12 @@
 	file_server
 	encode zstd gzip
 
+	# Delimiters avoid clashes with `{{` in code blocks; fills in UMAMI_WEBSITE_ID.
+	templates {
+		mime text/html
+		between "<!--@" "@-->"
+	}
+
 	header {
 		# Configure caching
 		Cache-Control "public, max-age=3600, must-revalidate" # 1h

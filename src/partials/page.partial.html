@@ -22,10 +22,8 @@
 
     {{ template "partials/footer.partial.html" . -}}
 
-    <script
-      defer
-      src="https://analytics.thetillhoff.de/script.js"
-      data-website-id="b231247b-1848-45f0-a1a8-4745d7b84d3d"
-    ></script>
+    <!--@ with env "UMAMI_WEBSITE_ID" @-->
+    <!--@ printf `<script defer src="https://analytics.thetillhoff.de/script.js" data-website-id="%s"></script>` . @-->
+    <!--@ end @-->
   </body>
 </html>
